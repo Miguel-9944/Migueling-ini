@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f8e8d9;
+            color: #5a3e2b;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #b22222;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .logo {
+            height: 150px;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size: 40px;
+            color: white;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+            margin-bottom: 10px;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .pizza {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+            padding: 15px;
+            width: 280px;
+            text-align: center;
+        }
+        .pizza img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .details-button, .order-button {
+            background-color: #ff4500;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            display: block;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .details-button:hover, .order-button:hover {
+            background-color: #d14000;
+            transform: scale(1.1);
+        }
+        .footer {
+            background-color: #b22222;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .back-button {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+        }
+        .back-button:hover {
+            background-color: #cc0000;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a</h1>
+        <img src="Miguel.jpg" alt="Pizzeria Miguelingüini Logo" class="logo">
+    </header>
+    
+    <h2>Menú de Pizzas</h2>
+    <div class="menu" id="menu"></div>
+    
+    <a href="Pagina Principal.html" class="back-button">Volver a Página Principal</a>
+    
+    <div class="footer">
+        <h3>Encuéntranos en:</h3>
+        <p>📍 Av. Principal #123, Ciudad Caborca Sonora, País Mexico</p>
+        <p>📞 Teléfono: +637 113 2195</p>
+    </div>
+
+    <script>
+        const pizzas = [
+            { 
+                nombre: "Pepperoni", 
+                precio: 120, 
+                imagen: "pepperoni.jpg",
+                detallePage: "pepperoni.html"
+            },
+            { 
+                nombre: "Hawaiana", 
+                precio: 110, 
+                imagen: "hawaiana.jpg",
+                detallePage: "hawaiana.html"
+            },
+            { 
+                nombre: "Mexicana", 
+                precio: 130, 
+                imagen: "mexicana.jpg",
+                detallePage: "mexicana.html"
+            }
+        ];
+
+        const menuDiv = document.getElementById("menu");
+        
+        pizzas.forEach((pizza) => {
+            const pizzaDiv = document.createElement("div");
+            pizzaDiv.classList.add("pizza");
+            pizzaDiv.innerHTML = `
+                <img src="${pizza.imagen}" alt="${pizza.nombre}">
+                <h2>${pizza.nombre}</h2>
+                <p><strong>$${pizza.precio}</strong></p>
+                <a href="${pizza.detallePage}" class="details-button">Detalles</a>
+            `;
+            menuDiv.appendChild(pizzaDiv);
+        });
+    </script>
+</body>
+</html>

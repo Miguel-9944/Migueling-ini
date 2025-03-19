@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Hawaiana - Detalles</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f8e8d9;
+            color: #5a3e2b;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #b22222;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+            height: 100px;
+            margin-right: 15px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .pizza-img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .description, .preparacion {
+            max-width: 600px;
+            margin: auto;
+            text-align: justify;
+        }
+        .order-button {
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+        }
+        .order-button:hover {
+            background-color: #d14000;
+            transform: scale(1.05);
+        }
+        .footer {
+            background-color: #b22222;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Miguel.jpg" alt="Pizzeria Logo" class="logo">
+        <h1>Pizza Hawaiana</h1>
+    </header>
+    
+    <div class="container">
+        <img src="hawaiana.jpg" alt="Pizza Hawaiana" class="pizza-img">
+        <h2>Ingredientes</h2>
+        <p class="description">Nuestra pizza Hawaiana combina el sabor salado del jamón con la dulzura de la piña, sobre una base de salsa de tomate y queso mozzarella derretido. Perfecta para los amantes de los contrastes de sabor.</p>
+        
+        <h2>Preparación</h2>
+        <div class="preparacion">
+            <p>Cada pizza es preparada con ingredientes frescos. La masa se amasa a mano y se hornea hasta alcanzar la textura perfecta. El jamón y la piña se agregan con precisión para garantizar el equilibrio perfecto entre lo dulce y lo salado.</p>
+        </div>
+        
+        <button class="order-button" onclick="window.location.href='https://wa.me/6371132195?text=Quiero%20ordenar%20una%20Pizza%20Hawaiana'">Pedir por WhatsApp</button>
+
+        <button class="order-button" onclick="window.location.href='Pizzeria.html'">Regresar al Menú</button>
+    </div>
+    
+    <div class="footer">
+        <h3>Encuéntranos en:</h3>
+        <p>📍 Av. Principal #123, Ciudad Caborca Sonora, País México</p>
+        <p>📞 Teléfono: +637 113 2195</p>
+    </div>
+</body>
+</html>
